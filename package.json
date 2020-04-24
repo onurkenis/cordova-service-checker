@@ -1,0 +1,41 @@
+{
+  "name": "com.onurkenis.cordovaservicechecker",
+  "version": "1.0.0",
+  "description": "A plugin to check Google Mobile Services and Huawei Mobile Services availabilities.",
+  "cordova": {
+    "id": "com.onurkenis.cordovaservicechecker",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/onurkenis/cordova-service-checker.git"
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android",
+    "huawei-mobile-services",
+    "google-mobile-services",
+    "hms",
+    "gms",
+    "hms-availability",
+    "gms-availability"
+  ],
+  "author": "Onur Kenis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/onurkenis/cordova-service-checker/issues"
+  },
+  "homepage": "https://github.com/onurkenis/cordova-service-checker#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "husky": "^4.2.5"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  }
+}
