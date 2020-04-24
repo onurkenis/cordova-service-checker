@@ -7,6 +7,9 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import com.huawei.hms.api.HuaweiApiAvailability;
+import com.google.android.gms.common.GoogleApiAvailability;
+
 public class CordovaServiceChecker extends CordovaPlugin {
 
     @Override
