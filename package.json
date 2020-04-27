@@ -28,6 +28,9 @@
     "url": "https://github.com/onurkenis/cordova-service-checker/issues"
   },
   "homepage": "https://github.com/onurkenis/cordova-service-checker#readme",
+  "scripts": {
+    "commit": "git-cz"
+  },
   "devDependencies": {
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
