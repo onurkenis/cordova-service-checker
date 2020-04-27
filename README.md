@@ -11,25 +11,17 @@ This plugin is created to serve Huawei Mobile Services and Google Mobile Servies
 cordova plugin add https://github.com/onurkenis/cordova-service-checker.git
 ```
 
-2. Huawei Mobile Services availability.
+2. Check Huawei Mobile Services availability:
 
 ```javascript
-async function () {
-    const isAvailable = await cordova.plugins.CordovaServiceChecker.isHmsAvailable();
-    alert("isHmsAvailable: " + isAvailable);
-}
+const isHmsAvailable = await cordova.plugins.CordovaServiceChecker.isHmsAvailable();
 ```
 
-3. Google Mobile Services availability.
+3. Check Google Mobile Services availability:
 
 ```javascript
-async function () {
-    const isAvailable = await cordova.plugins.CordovaServiceChecker.isGmsAvailable();
-    alert("isGmsAvailable: " + isAvailable);
-}
+const isGmsAvailable = await cordova.plugins.CordovaServiceChecker.isGmsAvailable();
 ```
-
-4. Trigger functions based on your app logic.
 
 
 ## Contributing
