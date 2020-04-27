@@ -10,7 +10,10 @@
                 <param name="android-package" value="com.onurkenis.cordovaservicechecker.CordovaServiceChecker" />
             </feature>
         </config-file>
+        
         <config-file parent="/*" target="AndroidManifest.xml"></config-file>
         <source-file src="src/android/CordovaServiceChecker.java" target-dir="src/com/onurkenis/cordovaservicechecker" />
+        <source-file src="src/android/Availability.java" target-dir="src/com/onurkenis/cordovaservicechecker" />
+
     </platform>
 </plugin>
