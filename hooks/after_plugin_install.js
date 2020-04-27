@@ -15,8 +15,7 @@ module.exports = function (context) {
   var rootGradleContent = FSUtils.readFile(ROOT_GRADLE_FILE, 'UTF-8');
   var lines = rootGradleContent.split(NEW_LINE);
 
-  var depAddedLines = addAGConnectDependency(lines);
-  var repoAddedLines = addHuaweiRepo(depAddedLines);
+  var repoAddedLines = addHuaweiRepo(lines);
 
   FSUtils.writeFile(ROOT_GRADLE_FILE, repoAddedLines.join(NEW_LINE));
 
