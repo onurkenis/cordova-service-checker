@@ -1,11 +1,12 @@
 package com.onurkenis.cordovaservicechecker;
 
+import android.content.Context;
+
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.CallbackContext;
 
 import org.json.JSONArray;
 import org.json.JSONException;
-import org.json.JSONObject;
 
 import com.huawei.hms.api.HuaweiApiAvailability;
 import com.google.android.gms.common.GoogleApiAvailability;
@@ -33,16 +34,21 @@ public class CordovaServiceChecker extends CordovaPlugin {
             int result = HuaweiApiAvailability.getInstance().isHuaweiMobileServicesAvailable(context);
             isAvailable = (com.huawei.hms.api.ConnectionResult.SUCCESS == result);
         }
-        callbackContext.success(isAvailable);
+
+        Availability availability = new Availability(isAvailable);
+        callbackContext.success(availability.toString());
     }
 
     private void isGmsAvailable(CallbackContext callbackContext) {
         boolean isAvailable = false;
         Context context = this.cordova.getActivity().getApplicationContext();
         if (null != context) {
-            int result = GoogleApiAvailability.getInstance().isGooglePlayServicesAvailable(context); 
+            int result = GoogleApiAvailability.getInstance().isGooglePlayServicesAvailable(context);
             isAvailable = (com.google.android.gms.common.ConnectionResult.SUCCESS == result);
         }
-        callbackContext.success(isAvailable);
+
+        Availability availability = new Availability(isAvailable);
+        callbackContext.success(availability.toString());
     }
+
 }
