@@ -5,12 +5,20 @@
         <clobbers target="cordova.plugins.CordovaServiceChecker" />
     </js-module>
     <platform name="android">
+        <hook type="before_plugin_uninstall" src="hooks/before_plugin_uninstall.js" />
+        <hook type="after_plugin_install" src="hooks/after_plugin_install.js" />
+        <hook type="after_prepare" src="hooks/after_prepare.js" />
+
+        <framework src="com.google.code.gson:gson:2.8.6" />
+        <framework src="com.huawei.hms:hwid:4.0.1.300" />
+        <framework src="com.google.android.gms:play-services-auth:17.0.0" />
+
         <config-file parent="/*" target="res/xml/config.xml">
             <feature name="CordovaServiceChecker">
                 <param name="android-package" value="com.onurkenis.cordovaservicechecker.CordovaServiceChecker" />
             </feature>
         </config-file>
-        
+
         <config-file parent="/*" target="AndroidManifest.xml"></config-file>
         <source-file src="src/android/CordovaServiceChecker.java" target-dir="src/com/onurkenis/cordovaservicechecker" />
         <source-file src="src/android/Availability.java" target-dir="src/com/onurkenis/cordovaservicechecker" />
